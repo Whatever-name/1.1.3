@@ -19,7 +19,6 @@ public class UserDaoJDBCImpl implements UserDao {
                     ", FIRSTNAME VARCHAR(255), LASTNAME VARCHAR(255)," +
                     "AGE INTEGER(3), PRIMARY KEY (ID))");
 
-
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
