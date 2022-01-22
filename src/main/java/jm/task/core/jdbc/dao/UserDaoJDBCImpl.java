@@ -10,6 +10,7 @@ import java.util.*;
 
 public class UserDaoJDBCImpl implements UserDao {
     private Connection connection;
+
     public UserDaoJDBCImpl() {
         connection = Util.getConnection();
     }
@@ -35,7 +36,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
 
     public void saveUser(String name, String lastName, byte age) {
-        try ( PreparedStatement preparedStatement = connection.prepareStatement
+        try (PreparedStatement preparedStatement = connection.prepareStatement
                 ("INSERT INTO USERS (FIRSTNAME, LASTNAME, AGE) VALUES(?,?,?);")) {
             preparedStatement.setString(1, name);
             preparedStatement.setString(2, lastName);
