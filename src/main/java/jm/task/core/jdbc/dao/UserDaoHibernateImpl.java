@@ -27,6 +27,7 @@ public class UserDaoHibernateImpl implements UserDao {
         }
     }
 
+
     @Override
     public void dropUsersTable() {
         try {
@@ -72,6 +73,7 @@ public class UserDaoHibernateImpl implements UserDao {
         List<User> users = session.createQuery("From User").list();
         return users;
     }
+
 
     @Override
     public void cleanUsersTable() {
