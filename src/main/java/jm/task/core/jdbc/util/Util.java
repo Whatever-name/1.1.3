@@ -41,7 +41,6 @@ public class Util {
                 .applySettings(configuration.getProperties())
                 .build();
         return configuration.buildSessionFactory(serviceRegistry);
-
     }
 }
 
